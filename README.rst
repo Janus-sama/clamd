@@ -1,25 +1,24 @@
 clamd
 =====
 
-.. image:: https://travis-ci.org/graingert/python-clamd.png?branch=master
-   :alt: travis build status
-   :target: https://travis-ci.org/graingert/python-clamd
-
 About
 -----
-`clamd` is a portable Python module to use the ClamAV anti-virus engine on 
+`python_clamd` is a portable Python module to use the ClamAV anti-virus engine on 
 Windows, Linux, MacOSX and other platforms. It requires a running instance of 
 the `clamd` daemon.
 
-This is a fork of pyClamd v0.2.0 created by Philippe Lagadec and published on his website: http://www.decalage.info/en/python/pyclamd which in turn is a slightly improved version of pyClamd v0.1.1 created by Alexandre Norman and published on his website: http://xael.org/norman/python/pyclamd/
+This is a fork of python-clamd which is a fork of pyClamd v0.2.0 created by Philippe Lagadec and published on his website: http://www.decalage.info/en/python/pyclamd which in turn is a slightly improved version of pyClamd v0.1.1 created by Alexandre Norman and published on his website: http://xael.org/norman/python/pyclamd/.
+
+This fork exists to update the dependencies of clamd in python as `pkg_resources` has been deprecated and would be removed soon.
+I will update and make patches to this wrapper, including typing and annotations.
 
 Usage
 -----
 
 To use with a unix socket::
 
-    >>> import clamd
-    >>> cd = clamd.ClamdUnixSocket()
+    >>> import python_clamd
+    >>> cd = python_clamd.ClamdUnixSocket()
     >>> cd.ping()
     'PONG'
     >>> cd.version()                             # doctest: +ELLIPSIS
